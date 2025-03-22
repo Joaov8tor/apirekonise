@@ -1,0 +1,13 @@
+{
+  "name": "my-app",
+  "version": "1.0.0",
+  "description": "Aplicação Node.js no Vercel",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "postinstall": "./install.sh"
+  },
+  "dependencies": {
+    "axios": "^0.21.1"
+  }
+}
