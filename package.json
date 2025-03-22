@@ -1,20 +1,18 @@
 {
   "name": "meu-projeto",
   "version": "1.0.0",
-  "description": "Descrição do projeto",
-  "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "echo 'Iniciando servidor...' && node server.js",
+    "postinstall": "echo 'Instalando dependências...' && npm install && echo 'Dependências instaladas com sucesso!' && npm run build",
+    "build": "echo 'Compilando o projeto...'",
+    "deploy": "echo 'Realizando o deploy...' && git push origin main && echo 'Deploy concluído!'",
+    "clear": "echo 'Limpeza do ambiente...' && rm -rf dist/* && echo 'Ambiente limpo!'"
   },
   "dependencies": {
     "express": "^4.17.1",
     "axios": "^0.21.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.7"
-  },
-  "engines": {
-    "node": ">=12.0.0"
+    "nodemon": "^2.0.6"
   }
 }
